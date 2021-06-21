@@ -1,5 +1,16 @@
 # SPARC sharedmemory madv.so.1
 
+Shared memory is created using
+```
+char *shmpointer_1 =shmat(shmid,NULL,00200 );
+
+```
+
+Intimate Shared memory using 
+```
+char *shmpointer_1 =shmat(shmid,NULL,SHM_SHARE_MMU);
+```
+
 
 ## Building
 ````
