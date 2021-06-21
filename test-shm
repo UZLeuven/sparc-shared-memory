@@ -1,0 +1,6 @@
+export LD_PRELOAD=madv.so.1
+export MADV=access_lwp
+
+output=$(./memoryTestReadMallocSharedMemory 1>/dev/null &)
+sleep 5
+pmap -L $( pgrep memoryTestReadMallocSharedMemory) | grep sh
